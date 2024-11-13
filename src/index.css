@@ -1,0 +1,112 @@
+@import url('assets/fonts/Satoshi_Complete/Fonts/WEB/css/satoshi.css');
+@font-face {
+  font-family: 'Font1Lig';
+  src: url(./assets/fonts/Font1Lig.otf) format('truetype');
+}
+@font-face {
+  font-family: 'Font2Lig';
+  src: url(./assets/fonts/Font2Lig.otf) format('truetype');
+}
+@font-face {
+  font-family: 'Font3Lig';
+  src: url(./assets/fonts/Font3Lig.otf) format('truetype');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-font1Lig {
+  @apply font-[Font1Lig];
+}
+
+.font-font2Lig {
+  @apply font-[Font2Lig];
+}
+
+.font-font3Lig {
+  @apply font-[Font3Lig];
+}
+
+.liga {
+  font-feature-settings: 'liga' 1;
+}
+.dlig {
+  font-feature-settings: 'dlig' 1;
+}
+/*Modal  ScrollBar */
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.output::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.modal::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a6a299;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2547a9;
+}
+
+/* Output ScrollBar */
+
+/* Custom Range Thumb */
+.range-slider {
+  -webkit-appearance: none; /* Removes default styling in Webkit-based browsers (Chrome, Safari) */
+  appearance: none; /* Removes default styling in Firefox */
+  width: 96%;
+  height: 6px;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.range-slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+/*  */
+
+.filter-black {
+  filter: brightness(0) saturate(100%);
+}
+
+.filter-white {
+  filter: brightness(0) saturate(100%) invert(1);
+}
