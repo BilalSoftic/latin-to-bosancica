@@ -4,10 +4,9 @@ import TextSize from './TextSize';
 import TextOutput from './TextOutput';
 import TextInput from './TextInput';
 import GlyphMap from './GlyphMap';
-import { useGlobalContext } from './Context';
+import PictureModal from './PictureModal';
 
 export default function App() {
-  const { isModalOpen } = useGlobalContext();
   return (
     <div className='font-satoshiBold  flex items-center justify-center h-screen w-full bg-background '>
       {/* main grid container */}
@@ -43,6 +42,9 @@ export default function App() {
 
         {/* Modal */}
         {<Modal />}
+
+        {/* Picture Modal */}
+        <PictureModal />
       </div>
     </div>
   );

@@ -20,6 +20,8 @@ export function AppProvider({ children }) {
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const [isPictureModalOpen, setIsPictureModalOpen] = useState(false);
+
   const [isLigatures, setIsLigatures] = useState(false);
 
   const [selectedIcons, setSelectedIcons] = useState({});
@@ -76,11 +78,13 @@ export function AppProvider({ children }) {
     }
   }, [selectedFontId, setFontFamily]);
 
-  // Function to open the modal
   const openModal = () => setIsModalOpen(true);
 
-  // Function to close the modal
   const closeModal = () => setIsModalOpen(false);
+
+  const openPictureModal = () => setIsPictureModalOpen(true);
+
+  const closePictureModal = () => setIsPictureModalOpen(false);
 
   return (
     <AppContext.Provider
@@ -99,6 +103,9 @@ export function AppProvider({ children }) {
         inputText,
         setInputText,
         outputText,
+        openPictureModal,
+        closePictureModal,
+        isPictureModalOpen,
       }}
     >
       {children}
