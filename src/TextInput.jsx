@@ -1,28 +1,14 @@
 import { useGlobalContext } from './Context';
 
 function TextInput() {
-  const { setText, selectedIcons } = useGlobalContext();
+  const { setInputText } = useGlobalContext();
 
   const handleText = (e) => {
-    const inputText = e.target.value;
-
-    // Transform the input text based on selected icons
-    const transformedText = inputText
-      .split('')
-      .map((char) => {
-        const selectedIcon = selectedIcons[char]; // Check if the char has a selected icon
-
-        // Append the text (like "1" or "2") if it exists
-        return selectedIcon && selectedIcon.text
-          ? `${char}${selectedIcon.text}`
-          : char;
-      })
-      .join('');
-    console.log(transformedText);
+    const newText = e.target.value;
 
     // Set the transformed text as the new value for output
-    setText((prevText) => {
-      return { ...prevText, value: transformedText };
+    setInputText((prevText) => {
+      return { ...prevText, value: newText };
     });
   };
 

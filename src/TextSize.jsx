@@ -2,8 +2,8 @@ import React from 'react';
 import { useGlobalContext } from './Context';
 
 const TextSize = () => {
-  const { text, setText } = useGlobalContext();
-  const { fontSize } = text;
+  const { outputText, setText } = useGlobalContext();
+  const { fontSize } = outputText;
 
   const handleChange = (e) => {
     setText((prevSize) => {

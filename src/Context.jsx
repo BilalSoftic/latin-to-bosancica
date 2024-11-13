@@ -4,7 +4,10 @@ import { charactersData } from './characters';
 const AppContext = createContext();
 
 export function AppProvider({ children }) {
-  const [text, setText] = useState({
+  const [inputText, setInputText] = useState({
+    value: '',
+  });
+  const [outputText, setOutputText] = useState({
     value: '',
     fontSize: 30,
   });
@@ -20,6 +23,26 @@ export function AppProvider({ children }) {
   const [isLigatures, setIsLigatures] = useState(false);
 
   const [selectedIcons, setSelectedIcons] = useState({});
+
+  useEffect(() => {
+    // Transform the input text based on selected icons
+    const transformedText = inputText.value
+      .split('')
+      .map((char) => {
+        const selectedIcon = selectedIcons[char]; // Check if the char has a selected icon
+
+        // Append the text (like "1" or "2") if it exists
+        return selectedIcon && selectedIcon.text
+          ? `${char}${selectedIcon.text}`
+          : char;
+      })
+      .join('');
+    console.log(transformedText);
+
+    setOutputText((prevText) => {
+      return { ...prevText, value: transformedText };
+    });
+  }, [inputText.value, selectedIcons]);
 
   // Initialize with the first icon for each character
   useEffect(() => {
@@ -62,8 +85,6 @@ export function AppProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
-        text,
-        setText,
         isModalOpen,
         openModal,
         closeModal,
@@ -75,6 +96,9 @@ export function AppProvider({ children }) {
         setIsLigatures,
         selectedIcons,
         updateSelectedIcon,
+        inputText,
+        setInputText,
+        outputText,
       }}
     >
       {children}
