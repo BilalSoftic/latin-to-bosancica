@@ -103,6 +103,7 @@ export function AppProvider({ children }) {
         inputText,
         setInputText,
         outputText,
+        setOutputText,
         openPictureModal,
         closePictureModal,
         isPictureModalOpen,
