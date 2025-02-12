@@ -12,12 +12,12 @@ const TextSize = () => {
   };
 
   return (
-    <div className=' h-fit flex flex-col  items-center '>
-      <h4 className='text-[30px] font-semibold w-fit place-self-start'>
-        Text size
+    <div className='  flex gap-2 md:gap-0 md:flex-col  items-center '>
+      <h4 className='flex flex-row text-[20px] md:text-[30px] font-semibold w-fit place-self-start capitalize md:lowercase'>
+        <span className='capitalize hidden md:block mr-2 '>Text</span> size
       </h4>
       <input
-        className='range-slider my-4 '
+        className='mobile-range-slider md:range-slider my-3.5 md:my-4 '
         type='range'
         min={20}
         max={100}

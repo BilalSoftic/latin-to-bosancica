@@ -8,6 +8,8 @@ export default {
         background: '#F9F6EE',
         black: '#000000',
         white: '#FFFFFF',
+        gray: '#C2C2C2',
+        grayer: '#9C9C9C',
         scrollbarThumbColor: '#A6A299',
         modalBackground: ' #CBC9C3',
       },
@@ -19,7 +21,7 @@ export default {
         font3Lig: ['Font3Lig'],
       },
       borderRadius: {
-        'custom-radius': '2.8rem',
+        'custom-radius': '0.75rem',
       },
     },
   },

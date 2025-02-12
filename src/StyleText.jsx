@@ -6,11 +6,16 @@ const StyleText = () => {
   return (
     <button
       type='button '
-      className=' rounded-custom-radius  font-semibold bg-black w-[22rem] h-full text-white gap-5 flex items-center justify-center'
+      className=' rounded-custom-radius  font-semibold bg-black w-full h-full text-white gap-1 md:gap-5 flex items-center justify-center'
       onClick={openModal}
     >
-      <img src={brush} alt='brush.svg' />
-      <h4 className='text-3xl leading-none '>Stylize text</h4>
+      <img src={brush} alt='brush.svg' className='size-[34px] md:size-[49px]' />
+      <h4 className='hidden md:block text-[20px] md:text-[26px] leading-[1.1] text-start w-[6rem]'>
+        Stylize text
+      </h4>
+      <h4 className='  md:hidden text-[26px] leading-[1.1] text-start md:w-[6rem]'>
+        Style
+      </h4>
     </button>
   );
 };
