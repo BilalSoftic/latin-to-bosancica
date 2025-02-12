@@ -24,7 +24,7 @@
 }
 
 .underline-animation::after {
-  @apply absolute content-[''] w-full h-2 left-0 bottom-[-0.4rem] bg-black;
+  @apply absolute content-[''] w-full h-1 left-0 bottom-[-0.4rem] bg-black;
   transform-origin: bottom left; /* Ensures the scaling starts from the left */
   animation: underline 3s forwards; /* Add animation on page load */
 }
@@ -35,6 +35,12 @@
   }
   100% {
     transform: scaleX(1); /* End with the line fully visible */
+  }
+}
+
+@media (min-width: 768px) {
+  .underline-animation::after {
+    @apply h-2;
   }
 }
 

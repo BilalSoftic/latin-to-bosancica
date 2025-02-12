@@ -13,8 +13,8 @@ export default function App() {
       {/* main grid container */}
       <div className='container grid h-screen md:h-auto max-w-[90rem] mx-[2rem] grid-cols-1 grid-rows-[auto,auto,1fr] lg:grid-rows-[auto,20rem,auto] md:gap-3'>
         {/* main header row */}
-        <div className='mainHeader font-semibold my-[1.9rem] md:mt-[4rem] md:mb-[2rem] row-start-1 col-start-1 flex items-center justify-start'>
-          <h1 className='text-black text-[2.25rem] md:text-[5rem] leading-none tracking-tight md:pb-4'>
+        <div className='mainHeader font-semibold my-[1.9rem] lg:mt-[4rem] lg:mb-[2rem] row-start-1 col-start-1 flex items-center justify-start'>
+          <h1 className='text-black text-[2.25rem] md:text-[3.25rem] lg:text-[5rem] leading-none tracking-tight md:pb-4'>
             Latin to{' '}
             <span className='underline-animation text-black font-bold'>
               Bosančica
