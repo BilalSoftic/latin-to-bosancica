@@ -44,9 +44,9 @@ const DownloadPdf = () => {
       <img
         src={arrowDown}
         alt='Download PDF'
-        className=' md-black filter-white size-[33px] md:size-[49px]'
+        className=' lg-black filter-white size-[33px] md:size-[49px]'
       />
-      <h4 className='hidden md:block text-[30px] leading-[1.5] w-[6rem]'>
+      <h4 className='hidden lg:block text-[30px] leading-[1.5] w-[6rem]'>
         Export PDF
       </h4>
     </button>

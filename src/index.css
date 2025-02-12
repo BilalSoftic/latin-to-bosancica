@@ -164,6 +164,12 @@
   filter: brightness(0) saturate(100%) invert(1);
 }
 
+@media (min-width: 1024px) {
+  .lg-black {
+    filter: brightness(0) saturate(100%);
+  }
+}
+
 @media (min-width: 768px) {
   .md-black {
     filter: brightness(0) saturate(100%);

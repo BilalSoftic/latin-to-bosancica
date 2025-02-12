@@ -25,7 +25,7 @@ function TextInput() {
     <textarea
       ref={inputRef}
       value={value}
-      className='rounded-custom-radius   min-h-[10.75rem] bg-gray md:col-start-1 md:row-start-1 border-black border-4 w-full text-[1rem] md:text-[1.5rem]  p-4 md:p-7   h-full overflow-y-auto resize-none focus:outline-none placeholder-white text-white '
+      className='rounded-custom-radius   min-h-[10.75rem] bg-gray lg:col-start-1 lg:row-start-1 border-black border-4 w-full text-[1rem] md:text-[1.5rem]  p-4 md:p-7   h-full overflow-y-auto resize-none focus:outline-none placeholder-white text-white '
       placeholder='Input text...'
       onChange={handleText}
     />
