@@ -11,10 +11,10 @@ const CharacterCard = ({ id, letter, letterIcons }) => {
   };
   return (
     <div className='flex  align-middle  justify-start bg-background'>
-      <div className='h-16 p-4 flex align-middle '>
-        <img src={letter} alt={`Character ${id}`} className='w-10' />
+      <div className='h-16 p-5 md:p-4 flex align-middle '>
+        <img src={letter} alt={`Character ${id}`} className='size-6 md:w-10' />
       </div>
-      <div className='flex width-[13rem] gap-x-2  '>
+      <div className='flex width-[13rem]   '>
         {Object.entries(letterIcons).map(
           ([key, { icon, text, id: iconId }]) => {
             return (

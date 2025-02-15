@@ -10,6 +10,7 @@ export default {
         white: '#FFFFFF',
         gray: '#C2C2C2',
         grayer: '#9C9C9C',
+        grayest: '#545454',
         scrollbarThumbColor: '#A6A299',
         modalBackground: ' #CBC9C3',
       },

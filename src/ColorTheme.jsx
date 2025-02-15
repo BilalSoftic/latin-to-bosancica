@@ -8,40 +8,42 @@ const ColorTheme = () => {
   };
 
   return (
-    <div className=' col-span-2 flex align-middle justify-start h-fit font-bold  py-11 px-24  gap-10  '>
-      <h4 className=' text-[2.5rem] w-32 h-full capitalize  leading-none py-8'>
+    <label className='inline-flex items-center cursor-pointer  w-full   font-bold'>
+      <input
+        type='checkbox'
+        value=''
+        className='sr-only peer'
+        /*  checked={isLigatures}
+        onChange={handleToggle} */
+      />
+      <h4 className='text-[20px] md:text-[30px]  w-10 md:w-24 mr-5 h-full capitalize  leading-none'>
         color theme
       </h4>
-
-      <div className=' flex flex-col gap-4 '>
-        {/* light button */}
-        <button
-          id='light'
-          className={` w-28 border-4 border-black rounded-custom-radius  p-3 text-xl ${
-            selectedId === 'light'
-              ? 'bg-blue text-white'
-              : 'bg-background text-black'
-          }`}
-          type='button'
-          onClick={() => handleButtonClick('light')}
-        >
-          Light
-        </button>
-        {/* dark button */}
-        <button
-          id='dark'
-          className={`w-28 border-4 border-black rounded-custom-radius  p-3 text-xl ${
-            selectedId === 'dark'
-              ? 'bg-blue text-white'
-              : 'bg-background text-black'
-          }`}
-          type='button'
-          onClick={() => handleButtonClick('dark')}
-        >
-          Dark
-        </button>
+      <div className=' md:hidden h-1 bg-background rounded flex-1 mx-3'></div>
+      <div className='flex flex-row gap-6 md:gap-12 mr-4'>
+        {/* Black and white */}
+        <div className='relative flex items-center justify-center w-[38px] h-[38px]'>
+          {/* Black Background Circle */}
+          <div className='absolute w-[38px] h-[38px] md:w-[49px] md:h-[49px] bg-black rounded-full'></div>
+          {/* White Foreground Circle (Slightly Smaller) */}
+          <div className='absolute left-4 md:left-6 w-[38px] h-[38px] md:w-[49px] md:h-[49px] border-4 border-black bg-white rounded-full'></div>
+        </div>
+        {/* Black and white */}
+        <div className='relative flex items-center justify-center w-[38px] h-[38px]'>
+          {/* Black Background Circle */}
+          <div className='absolute w-[38px] h-[38px] md:w-[49px] md:h-[49px] bg-black rounded-full'></div>
+          {/* White Foreground Circle (Slightly Smaller) */}
+          <div className='absolute  left-4 md:left-6 w-[38px] h-[38px] md:w-[49px] md:h-[49px] border-4 border-black bg-white rounded-full'></div>
+        </div>{' '}
+        {/* Black and white */}
+        <div className='relative flex items-center justify-center w-[38px] h-[38px]'>
+          {/* Black Background Circle */}
+          <div className='absolute w-[38px] h-[38px] md:w-[49px] md:h-[49px] bg-black rounded-full'></div>
+          {/* White Foreground Circle (Slightly Smaller) */}
+          <div className='absolute  left-4 md:left-6 w-[38px] h-[38px] md:w-[49px] md:h-[49px] border-4 border-black bg-white rounded-full'></div>
+        </div>
       </div>
-    </div>
+    </label>
   );
 };
 

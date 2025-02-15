@@ -17,6 +17,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  overflow-y: scroll; /* Enables scrolling */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 @layer components {
   .underline-animation {
     @apply relative;

@@ -7,7 +7,7 @@ const Ligatures = () => {
     setIsLigatures(!isLigatures);
   };
   return (
-    <label className='inline-flex items-center cursor-pointer bg-background py-4 px-14 w-full h-[9.5rem]   justify-around border-4 border-black rounded-[22px] font-bold'>
+    <label className='inline-flex items-center cursor-pointer  w-full    justify-between  font-bold'>
       <input
         type='checkbox'
         value=''
@@ -15,10 +15,11 @@ const Ligatures = () => {
         checked={isLigatures}
         onChange={handleToggle}
       />
-      <h4 className='text-[2.5rem]'>Ligatures</h4>
+      <h4 className=' text-[20px] md:text-[30px]'>Ligatures</h4>
+      <div className=' md:hidden h-1 bg-background rounded flex-1 mx-3'></div>
       <div
-        className="relative w-[144px] h-[48.5px]  rounded-full peer peer-checked:bg-blue bg-background border-4 border-black
-    after:content-[''] after:absolute     peer-checked:after:bg-white after:bg-black  after:rounded-full after:h-[40px] after:w-[40px] after:p-2 after:transition-transform after:duration-200 peer-checked:after:translate-x-24"
+        className="relative w-[84px] h-[37px] md:w-[135px] md:h-[54px]  rounded-full peer peer-checked:bg-black bg-background border-4 border-black
+    after:content-[''] after:absolute     peer-checked:after:bg-white after:bg-black  after:rounded-full after:h-[25px] after:w-[25px] md:after:h-[37px] md:after:w-[37px] after:m-0.5  md:after:m-1 after:transition-transform after:duration-200 peer-checked:after:translate-x-12 md:peer-checked:after:translate-x-20"
       ></div>
     </label>
   );
