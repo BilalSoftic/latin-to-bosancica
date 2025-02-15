@@ -75,7 +75,13 @@ body::-webkit-scrollbar {
 /*Modal  ScrollBar */
 /* width */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 0px;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
 }
 
 /* Track */

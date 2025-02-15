@@ -10,7 +10,7 @@ const Modal = () => {
   return (
     isModalOpen && (
       <div className='fixed inset-0 md:p-8 bg-black bg-opacity-50  flex justify-center z-50  '>
-        <div className=' modal bg-modalBackground   h-full pl-[3rem] pr-[2rem] py-[2rem] md:px-[5rem] md:py-[3rem] md:rounded-custom-radius  overflow-x-hidden overflow-y-auto '>
+        <div className=' modal bg-modalBackground   h-full px-[3rem]  py-[2rem] md:px-[5rem] md:py-[3rem] md:rounded-custom-radius  overflow-x-hidden overflow-y-auto '>
           {/* Grids */}
           <div className='container grid grid-cols-1 grid-rows-[3.313rem,auto,auto,1fr] md:grid-cols-[47.188rem,1fr] md:grid-rows-[8.688rem,1fr]  max-w-[77.5rem] gap-y-[2rem] md:gap-[2.5rem] '>
             {/* Font Style */}
