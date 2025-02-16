@@ -9,11 +9,13 @@ const FontStyleButton = ({ icon, text, isSelected, onClick }) => {
       <img
         src={icon}
         alt={text}
-        className={` size-[2.5rem] md:size-[7rem] ${
+        className={` size-[2.5rem] md:size-[5.25rem] lg:size-[7rem] ${
           isSelected ? 'filter-white' : ''
         } mb-5 md:mb-10`}
       />
-      <h4 className=' w-12 md:w-24 text-sm md:text-2xl   '>{text}</h4>
+      <h4 className=' w-12 md:w-24 text-sm md:text-xl lg:text-2xl   '>
+        {text}
+      </h4>
     </button>
   );
 };
